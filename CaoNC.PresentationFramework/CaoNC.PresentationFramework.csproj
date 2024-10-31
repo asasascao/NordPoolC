@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{060449C2-F2BF-403E-83A1-8DE16790C634}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CaoNC</RootNamespace>
+    <AssemblyName>CaoNC.PresentationFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft.Extensions.Caching.Distributed\DistributedCacheEntryOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\CacheEntry.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\CacheEntryExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\CacheExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\CacheItemPriority.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\EvictionReason.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\ICacheEntry.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Distributed\IDistributedCache.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryCacheEntryOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryCacheStatistics.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\PostEvictionCallbackRegistration.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\PostEvictionDelegate.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\AsyncServiceScope.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\IServiceCollection.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\IServiceScope.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\IServiceScopeFactory.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\ISupportRequiredService.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\OptionsBuilderExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\OptionsServiceCollectionExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\ServiceCollectionDescriptorExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\ServiceCollectionServiceExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\ServiceDescriptor.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\ServiceLifetime.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\ServiceProviderServiceExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.Internal\ISystemClock.cs" />
+    <Compile Include="Microsoft.Extensions.Options\ConfigureNamedOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IConfigureNamedOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IConfigureOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IOptionsChangeTokenSource.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IOptionsFactory.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IOptionsMonitor.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IOptionsMonitorCache.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IOptionsSnapshot.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IStartupValidator.cs" />
+    <Compile Include="Microsoft.Extensions.Options\Options.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsBuilder.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsCache.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsFactory.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsManager.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsMonitor.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsValidationException.cs" />
+    <Compile Include="Microsoft.Extensions.Options\OptionsWrapper.cs" />
+    <Compile Include="Microsoft.Extensions.Options\PostConfigureOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Options\StartupValidator.cs" />
+    <Compile Include="Microsoft.Extensions.Options\StartupValidatorOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Options\UnnamedOptionsManager.cs" />
+    <Compile Include="Microsoft.Extensions.Options\ValidateOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Options\ValidateOptionsResult.cs" />
+    <Compile Include="Microsoft.Extensions.Primitives\ChangeToken.cs" />
+    <Compile Include="Microsoft.Extensions.Primitives\IChangeToken.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\IMemoryCache.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryCache.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryCacheOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryCacheServiceCollectionExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryDistributedCache.cs" />
+    <Compile Include="Microsoft.Extensions.Caching.Memory\MemoryDistributedCacheOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\DebuggerDisplayFormatting.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\EventId.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\FormattedLogValues.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\IExternalScopeProvider.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\ILogger.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\ILoggerFactory.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\ILoggerProvider.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\ILoggingBuilder.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\ISupportExternalScope.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LogDefineOptions.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LogEntry.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\Logger.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LoggerExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LoggerExternalScopeProvider.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LoggerFactoryExtensions.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LoggerMessage.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LoggerMessageAttribute.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LogLevel.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\LogValuesFormatter.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\NullExternalScopeProvider.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\NullLogger.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\NullLoggerFactory.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\NullLoggerProvider.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\NullScope.cs" />
+    <Compile Include="Microsoft.Extensions.Logging\TypeNameHelper.cs" />
+    <Compile Include="Microsoft.Extensions.Options\IOptions.cs" />
+    <Compile Include="Microsoft.VisualStudio.Threading\AsyncManualResetEvent.cs" />
+    <Compile Include="Microsoft.VisualStudio.Threading\EmptyStruct.cs" />
+    <Compile Include="Microsoft.VisualStudio.Threading\TaskCompletionSourceWithoutInlining.cs" />
+    <Compile Include="System.Buffers\ArrayPool.cs" />
+    <Compile Include="System.Buffers\ArrayPoolEventSource.cs" />
+    <Compile Include="System.Buffers\Utilities.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\DoesNotReturnAttribute.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\DynamicallyAccessedMembersAttribute.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\DynamicallyAccessedMemberTypes.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\MaybeNullWhenAttribute.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\MemberNotNullAttribute.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\RequiresDynamicCodeAttribute.cs" />
+    <Compile Include="System.Diagnostics.CodeAnalysis\UnconditionalSuppressMessageAttribute.cs" />
+    <Compile Include="System.Runtime.CompilerServices\InterpolatedStringHandlerAttribute.cs" />
+    <Compile Include="System.Text\ValueStringBuilder.cs" />
+    <Compile Include="System.Channels\AsyncOperation.cs" />
+    <Compile Include="System.Channels\BoundedChannel.cs" />
+    <Compile Include="System.Channels\BoundedChannelFullMode.cs" />
+    <Compile Include="System.Channels\BoundedChannelOptions.cs" />
+    <Compile Include="System.Collections\IProducerConsumerQueue.cs" />
+    <Compile Include="System.Collections\PaddingFor32.cs" />
+    <Compile Include="System.Collections\SingleProducerSingleConsumerQueue.cs" />
+    <Compile Include="System.Collections\Deque.cs" />
+    <Compile Include="System.Attribute\StackTraceHiddenAttribute.cs" />
+    <Compile Include="System.Marvin\Marvin.cs" />
+    <Compile Include="System.Memory\MemoryExtensions.cs" />
+    <Compile Include="System.Numerics\ConstantHelper.cs" />
+    <Compile Include="System.Numerics\HashHelpers.cs" />
+    <Compile Include="System.Numerics\IntrinsicAttribute.cs" />
+    <Compile Include="System.Numerics\Register.cs" />
+    <Compile Include="System.Numerics\Vector.cs" />
+    <Compile Include="System.Runtime.CompilerServices\AsyncValueTaskMethodBuilder.cs" />
+    <Compile Include="System.Runtime.CompilerServices\CallerArgumentExpressionAttribute.cs" />
+    <Compile Include="System.Runtime.CompilerServices\ConfiguredValueTaskAwaitable.cs" />
+    <Compile Include="System.Attribute\NonVersionableAttribute.cs" />
+    <Compile Include="System.Runtime.CompilerServices\Unsafe.cs" />
+    <Compile Include="System.Runtime.CompilerServices\ValueTaskAwaiter.cs" />
+    <Compile Include="System.Threading\ExecutionContext.cs" />
+    <Compile Include="System.Threading\IAsyncDisposable.cs" />
+    <Compile Include="System.Threading\ValueTask.cs" />
+    <Compile Include="System.Threading\CancellationCallbackInfo.cs" />
+    <Compile Include="System.Attribute\FriendAccessAllowedAttribute.cs" />
+    <Compile Include="System.Threading\SparselyPopulatedArrayAddInfo.cs" />
+    <Compile Include="System.Threading\TaskCreationOptions.cs" />
+    <Compile Include="System.Threading\TaskEx.cs" />
+    <Compile Include="System.Threading\VoidTaskResult.cs" />
+    <Compile Include="System\AppContext.cs" />
+    <Compile Include="System\AppContextDefaultValues.cs" />
+    <Compile Include="System.Attribute\AsyncMethodBuilderAttribute.cs" />
+    <Compile Include="System\CompatibilitySwitch.cs" />
+    <Compile Include="System\ExceptionArgument.cs" />
+    <Compile Include="System\FormatEx.cs" />
+    <Compile Include="System.Attribute\DynamicallyInvokableAttribute.cs" />
+    <Compile Include="System.Memory\Memory.cs" />
+    <Compile Include="System.Memory\MemoryDebugView.cs" />
+    <Compile Include="System.Memory\MemoryHandle.cs" />
+    <Compile Include="System.Memory\MemoryManager.cs" />
+    <Compile Include="System.Memory\MemoryMarshal.cs" />
+    <Compile Include="System.Buffers\Pinnable.cs" />
+    <Compile Include="System.Buffers\ReadOnlyMemory.cs" />
+    <Compile Include="System.Buffers\ReadOnlySpan.cs" />
+    <Compile Include="System\Security.cs" />
+    <Compile Include="System.Buffers\Span.cs" />
+    <Compile Include="System.Buffers\SpanDebugView.cs" />
+    <Compile Include="System.Buffers\SpanHelpers.cs" />
+    <Compile Include="System\StringBuilderCache.cs" />
+    <Compile Include="System\ThrowHelper.cs" />
+    <Compile Include="System\Win32Native.cs" />
+    <Compile Include="System.Channels\Channel.cs" />
+    <Compile Include="System.Exception\ChannelClosedException.cs" />
+    <Compile Include="System.Channels\ChannelOptions.cs" />
+    <Compile Include="System.Channels\ChannelReader.cs" />
+    <Compile Include="System.Channels\ChannelUtilities.cs" />
+    <Compile Include="System.Channels\ChannelWriter.cs" />
+    <Compile Include="System.Channels\DebugEnumeratorDebugView.cs" />
+    <Compile Include="System\Obsoletions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.Channels\SingleConsumerUnboundedChannel.cs" />
+    <Compile Include="System\SR.cs" />
+    <Compile Include="System.Channels\TaskCompletionSource.cs" />
+    <Compile Include="System.Channels\UnboundedChannel.cs" />
+    <Compile Include="System\VoidResult.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

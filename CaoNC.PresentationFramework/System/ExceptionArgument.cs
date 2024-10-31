@@ -1,0 +1,35 @@
+﻿namespace CaoNC.System
+{
+    internal enum ExceptionArgument
+    {
+        task,
+        source,
+        state,
+        length,
+        start,
+        minimumBufferSize,
+        elementIndex,
+        comparable,
+        comparer,
+        destination,
+        offset,
+        startSegment,
+        endSegment,
+        startIndex,
+        endIndex,
+        array,
+        culture,
+        manager,
+        buffer,
+        text,
+        count,
+        index,
+        value,
+        capacity,
+        separators,
+        comparisonType,
+        changeTokens,
+        changeTokenProducer,
+        changeTokenConsumer,
+    }
+}

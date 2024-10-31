@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BAD292E-F611-4062-A3D1-A6B0464CDB5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NordPoolC</RootNamespace>
+    <AssemblyName>NordPoolC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apache.NMS, Version=2.1.0.0, Culture=neutral, PublicKeyToken=82756feee3957618, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apache.NMS.2.1.0\lib\net40\Apache.NMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Apache.NMS.Stomp, Version=1.5.4.3215, Culture=neutral, PublicKeyToken=82756feee3957618, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apache.NMS.Stomp.1.5.4\lib\net40\Apache.NMS.Stomp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.34.0\lib\net45\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.34.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.34.0\lib\net45\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.34.0\lib\net45\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.34.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.34.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\OrderBuilder.cs" />
+    <Compile Include="Builders\RequestBuilder.cs" />
+    <Compile Include="Commands\Commands.cs" />
+    <Compile Include="Config\PConfig.cs" />
+    <Compile Include="Connection\IClient.cs" />
+    <Compile Include="Connection\IConnecter.cs" />
+    <Compile Include="Connection\ISsoService.cs" />
+    <Compile Include="Connection\IStompConnecter.cs" />
+    <Compile Include="Enums\CommandType.cs" />
+    <Compile Include="Commands\TokenRefreshCommand.cs" />
+    <Compile Include="Config\ConfigBase.cs" />
+    <Compile Include="Config\Credentials.cs" />
+    <Compile Include="Config\Endpoints.cs" />
+    <Compile Include="Config\GlobalConfig.cs" />
+    <Compile Include="Config\SslPoint.cs" />
+    <Compile Include="Config\Sso.cs" />
+    <Compile Include="Extensions\IClientEx.cs" />
+    <Compile Include="Extensions\MemoryCacheProxy.cs" />
+    <Compile Include="Extensions\StompClientEx.cs" />
+    <Compile Include="INPool.cs" />
+    <Compile Include="Logger\LogFactory.cs" />
+    <Compile Include="Message\GlobalCacheProxy.cs" />
+    <Compile Include="Model\ContractPortfolioAndArea.cs" />
+    <Compile Include="Model\EntryExtensions\OrderEntry.cs" />
+    <Compile Include="PublicApi\Models\area\DeliveryAreaPortfolio.cs" />
+    <Compile Include="PublicApi\Models\area\DeliveryAreaState.cs" />
+    <Compile Include="PublicApi\Models\base\BaseTradeRow.cs" />
+    <Compile Include="PublicApi\Models\CapacityRow.cs" />
+    <Compile Include="PublicApi\Models\command\Command.cs" />
+    <Compile Include="PublicApi\Models\command\CommandType.cs" />
+    <Compile Include="PublicApi\Models\command\TokenRefreshCommand.cs" />
+    <Compile Include="PublicApi\Models\ConfigurationRow.cs" />
+    <Compile Include="PublicApi\Models\ContractRow.cs" />
+    <Compile Include="PublicApi\Models\contract\ContractState.cs" />
+    <Compile Include="PublicApi\Models\contract\ProductType.cs" />
+    <Compile Include="PublicApi\Models\DeliveryAreaRow.cs" />
+    <Compile Include="PublicApi\Models\heartbeat\HeartBeatItem.cs" />
+    <Compile Include="PublicApi\Models\heartbeat\HeartbeatMessage.cs" />
+    <Compile Include="PublicApi\Models\LocalViewRow.cs" />
+    <Compile Include="PublicApi\Models\market\MarketPortfolio.cs" />
+    <Compile Include="PublicApi\Models\OperationalMessage.cs" />
+    <Compile Include="PublicApi\Models\OrderExecutionReport.cs" />
+    <Compile Include="PublicApi\Models\order\error\Error.cs" />
+    <Compile Include="PublicApi\Models\order\error\ErrorCode.cs" />
+    <Compile Include="PublicApi\Models\order\error\ErrorType.cs" />
+    <Compile Include="PublicApi\Models\order\ExecutionRestriction.cs" />
+    <Compile Include="PublicApi\Models\order\Order.cs" />
+    <Compile Include="PublicApi\Models\order\OrderAction.cs" />
+    <Compile Include="PublicApi\Models\order\OrderEntry.cs" />
+    <Compile Include="PublicApi\Models\order\OrderExecutionEntry.cs" />
+    <Compile Include="PublicApi\Models\order\OrderModification.cs" />
+    <Compile Include="PublicApi\Models\order\OrderModificationType.cs" />
+    <Compile Include="PublicApi\Models\order\OrderOwnershipEnum.cs" />
+    <Compile Include="PublicApi\Models\order\OrderSide.cs" />
+    <Compile Include="PublicApi\Models\order\OrderState.cs" />
+    <Compile Include="PublicApi\Models\order\OrderType.cs" />
+    <Compile Include="PublicApi\Models\order\request\OrderEntryRequest.cs" />
+    <Compile Include="PublicApi\Models\order\request\OrderModificationRequest.cs" />
+    <Compile Include="PublicApi\Models\order\TimeInForce.cs" />
+    <Compile Include="PublicApi\Models\portfolio\Portfolio.cs" />
+    <Compile Include="PublicApi\Models\portfolio\PortfolioPermission.cs" />
+    <Compile Include="PublicApi\Models\PrivateTradeRow.cs" />
+    <Compile Include="PublicApi\Models\PublicTradeRow.cs" />
+    <Compile Include="PublicApi\Models\statistic\BaseStatisticRow.cs" />
+    <Compile Include="PublicApi\Models\statistic\PublicStatisticRow.cs" />
+    <Compile Include="PublicApi\Models\statistic\Tendency.cs" />
+    <Compile Include="PublicApi\Models\statistic\TradeHistory.cs" />
+    <Compile Include="PublicApi\Models\throttling\ThrottlingLimitMessage.cs" />
+    <Compile Include="PublicApi\Models\trade\Currency.cs" />
+    <Compile Include="PublicApi\Models\trade\leg\BaseTradeLeg.cs" />
+    <Compile Include="PublicApi\Models\trade\leg\LegOwnerShip.cs" />
+    <Compile Include="PublicApi\Models\trade\leg\LegOwnershipEnum.cs" />
+    <Compile Include="PublicApi\Models\trade\leg\PrivateTradeLeg.cs" />
+    <Compile Include="PublicApi\Models\trade\leg\PublicTradeLeg.cs" />
+    <Compile Include="PublicApi\Models\trade\request\TradeRecallRequest.cs" />
+    <Compile Include="PublicApi\Models\trade\TradeState.cs" />
+    <Compile Include="NPool.cs" />
+    <Compile Include="Stomp\StompClient.cs" />
+    <Compile Include="Exceptions\StompConnectionException.cs" />
+    <Compile Include="Extensions\StompFrame.cs" />
+    <Compile Include="Message\StompMessageFactory.cs" />
+    <Compile Include="Stomp\WSStompConnecter.cs" />
+    <Compile Include="Subscription\StompSubscription.cs" />
+    <Compile Include="Builders\DestinationBuilder.cs" />
+    <Compile Include="Subscription\SubscribeRequest.cs" />
+    <Compile Include="Subscription\SubscribeRequestBuilder.cs" />
+    <Compile Include="Subscription\Subscription.cs" />
+    <Compile Include="Exceptions\SubscriptionFailedException.cs" />
+    <Compile Include="WebSockets\WebSocketConnecter.cs" />
+    <Compile Include="Enums\ConnectServiceType.cs" />
+    <Compile Include="Enums\PublishingMode.cs" />
+    <Compile Include="Extensions\IDictionaryEx.cs" />
+    <Compile Include="Helper\INIHelper.cs" />
+    <Compile Include="Message\Headers.cs" />
+    <Compile Include="Message\MessageReceivedEventArgs.cs" />
+    <Compile Include="Message\ReceivedMessage.cs" />
+    <Compile Include="Message\WebSocketMessages.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AccessTokenResponse.cs" />
+    <Compile Include="Security\SsoService.cs" />
+    <Compile Include="Exceptions\TokenRequestFailedException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaoNC.PresentationFramework\CaoNC.PresentationFramework.csproj">
+      <Project>{060449c2-f2bf-403e-83a1-8de16790c634}</Project>
+      <Name>CaoNC.PresentationFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

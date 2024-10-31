@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\NordPoolCSample\CaoNC.PresentationFramework\bin\Release\CaoNC.PresentationFramework.dll
+C:\Users\Administrator\Desktop\NordPoolCSample\CaoNC.PresentationFramework\bin\Release\CaoNC.PresentationFramework.pdb
+C:\Users\Administrator\Desktop\NordPoolCSample\CaoNC.PresentationFramework\obj\Release\CaoNC.PresentationFramework.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\NordPoolCSample\CaoNC.PresentationFramework\obj\Release\CaoNC.PresentationFramework.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NordPoolCSample\CaoNC.PresentationFramework\obj\Release\CaoNC.PresentationFramework.dll
+C:\Users\Administrator\Desktop\NordPoolCSample\CaoNC.PresentationFramework\obj\Release\CaoNC.PresentationFramework.pdb

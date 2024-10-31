@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\NordPoolCSample\Channels\obj\Debug\Channels.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\NordPoolCSample\Channels\obj\Debug\Channels.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NordPoolCSample\Channels\bin\Debug\CaoNC.dll
+C:\Users\Administrator\Desktop\NordPoolCSample\Channels\bin\Debug\CaoNC.pdb
+C:\Users\Administrator\Desktop\NordPoolCSample\Channels\obj\Debug\CaoNC.dll
+C:\Users\Administrator\Desktop\NordPoolCSample\Channels\obj\Debug\CaoNC.pdb
