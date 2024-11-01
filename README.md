@@ -27,3 +27,6 @@ LogFactory.RegisterDebugLog,LogFactory.RegisterWarningLog,LogFactory.RegisterInf
 ->trading
 ......
 ->IClient.DisconnectAsync
+
+
+Welcome to help streamline this process. Thank you in advance
